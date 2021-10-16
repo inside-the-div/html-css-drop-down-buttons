@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    color: #fff;
+    font-size: 60px;
+    padding: 30px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    display: inline-block;
+    margin: 10px;
+}
+
+.parent {
+    display: block;
+}
+
+.parent>a {
+    display: block;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+
+
+/*for icon rotation*/
+
+.dropdown .parent a span {
+    display: inline-block;
+    transition: 0.4s;
+    font-size: 14px;
+}
+
+.dropdown .parent:hover>a span {
+    transform: rotate(-90deg);
+}
+
+.childs {
+    background-color: #d3d3d3;
+}
+
+.childs li {
+    display: block;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.childs li a {
+    display: block;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+
+
+/*main effect*/
+
+.dropdown-1 .childs {
+    display: none;
+}
+
+.dropdown-1 .parent:hover>.childs {
+    display: block;
+}
+
+.dropdown-2 .childs {
+    height: 0px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.dropdown-2 .parent:hover .childs {
+    height: 100px;
+    transition: 0.4s;
+}
+
+.dropdown-3 .childs {
+    width: 0px;
+    height: 0px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+
+.dropdown-3 .parent:hover .childs {
+    width: 100%;
+    height: auto;
+}
+
+.dropdown-4 .parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-4 .childs {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: -400%;
+    left: 0;
+    transition: 0.1s;
+}
+
+.dropdown-4 .parent:hover {
+    overflow: visible;
+}
+
+.dropdown-4 .parent:hover .childs {
+    top: 100%;
+}
+
+.dropdown-5 .parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-5 .childs {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 400%;
+    /*just changed*/
+    left: 0;
+    transition: 0.1s;
+}
+
+.dropdown-5 .parent:hover {
+    overflow: visible;
+}
+
+.dropdown-5 .parent:hover .childs {
+    top: 100%;
+}
+
+.dropdown-6 .parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-6 .childs {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 100%;
+    right: 200px;
+    /*just changed*/
+    transition: 0.4s;
+}
+
+.dropdown-6 .parent:hover {
+    overflow: visible;
+}
+
+.dropdown-6 .parent:hover .childs {
+    right: 0px;
+    /*just changed*/
+    transform: rotate(360deg);
+    /*just changed*/
+}
+
+.dropdown-7 .parent {
+    position: relative;
+    overflow: hidden;
+}
+
+.dropdown-7 .childs {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 100%;
+    left: -100px;
+    /*just changed*/
+    transition: 0.4s;
+    transform: scale(0);
+    /*just changed*/
+}
+
+.dropdown-7 .parent:hover {
+    overflow: visible;
+}
+
+.dropdown-7 .parent:hover .childs {
+    left: 0px;
+    /*just changed*/
+    transform: scale(1);
+    /*just changed*/
+}
+
+.dropdown-8 .parent {
+    position: relative;
+}
+
+.dropdown-8 .childs {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    /*just changed*/
+    transition: 0.4s;
+    transform: scale(0);
+    /*just changed*/
+}
+
+.dropdown-8 .parent:hover .childs {
+    transform: scale(1);
+    /*just changed*/
+}
+
+.dropdown-9 .parent {
+    position: relative;
+}
+
+.dropdown-9 .childs {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 100%;
+    right: -100px;
+    /*just changed*/
+    transition: 0.4s;
+    transform: scale(0);
+}
+
+.dropdown-9 .parent:hover .childs {
+    right: 0px;
+    /*just changed*/
+    transform: scale(1);
+}
